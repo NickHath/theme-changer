@@ -19,6 +19,9 @@ class App extends Component {
       allowEdit: 'true'
     }
     this.updateColor = this.updateColor.bind(this);
+    this.updateSize = this.updateSize.bind(this);
+    this.updateFamily = this.updateFamily.bind(this);
+    this.updateEditStatus = this.updateEditStatus.bind(this);
   }
 
   // updateColor
@@ -29,10 +32,25 @@ class App extends Component {
   }
 
   // updateSize
+  updateSize(newSize) {
+    this.setState({
+      fontSize: newSize
+    })
+  }
 
   // updateFamily
+  updateFamily(newFont) {
+    this.setState({
+      fontFamily: newFont
+    })
+  }
 
   // updateEditStatus
+  updateEditStatus(newEditStatus) {
+    this.setState({
+      allowEdit: newEditStatus
+    })
+  }
 
   render() {
     return (
