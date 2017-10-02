@@ -9,8 +9,24 @@ import TextContainer from './components/TextContainer';
 
 class App extends Component {
   // constructor
+  constructor() {
+    super();
+
+    this.state = {
+      fontColor: 'black',
+      fontSize: 12,
+      fontFamily: 'Arial',
+      allowEdit: 'true'
+    }
+    this.updateColor = this.updateColor.bind(this);
+  }
 
   // updateColor
+  updateColor(newColor) {
+    this.setState({
+      fontColor: newColor
+    })
+  }
 
   // updateSize
 
